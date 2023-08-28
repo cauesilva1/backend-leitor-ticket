@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors');   
 const app = express();
 const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
