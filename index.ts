@@ -11,21 +11,20 @@ app.use(cors())
 app.use(express.json())
 
 app.post('/cadastroAluno', async (req: any, res: any) => {
-  const { name, ra, semestre } = req.body
+  const { name, ra, semestre, date } = req.body
 
-  console.log(name, ra, semestre)
-
+  console.log(name, ra, semestre, date)
+  
    await prisma.aluno.create({
     data: {
       nome: name,
       ra,
-      semestre
+      semestre,
+      dateScann: date,
     }
   })
   res.json({ ok: true })
 })
-
-
 
 
 app.listen(port, () => {

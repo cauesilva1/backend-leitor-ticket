@@ -9,7 +9,8 @@ datasource db {
 }
 
 model aluno {
-  ra       String @id @db.VarChar(10)
-  nome     String @db.VarChar(255)
-  semestre String @db.VarChar(20)
+  ra        String    @id @db.VarChar(10)
+  nome      String    @db.VarChar(255)
+  semestre  String    @db.VarChar(20)
+  dateScann DateTime
 }
